@@ -5,6 +5,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
+import { createStore } from 'redux';
+
+
 ReactDOM.render(
   <BrowserRouter><App /></BrowserRouter>,
   document.getElementById('root')
