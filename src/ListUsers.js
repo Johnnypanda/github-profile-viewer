@@ -20,16 +20,20 @@ class ListUsers extends Component {
 			          <button> Search </button>
 			        </form>
 		        </div>
+
 		  		<ul className="list-users">
 		     	   {this.props.users.map((user) => (
+
 				          <li key={user.id}>
-				            {user.login}
-				            <img src={user.avatar_url} style={{maxWidth: '100px'}}/>
- 						    <Link to="/view"
-				          	 className ="view-user"
-				          	 onSubmit={this.props.viewUserInfo}>
-				          	View Profile
-				          	</Link>
+					            <p>{user.login}</p>
+					            <img src={user.avatar_url} style={{maxWidth: '120px'}}/>
+	 						    <Link to="/view"
+					          	 className ="view-user"
+					          	 onClick={() => (console.log(this.props.currentUser))}
+
+					          	 >
+					          	View Profile
+					          	</Link>
 				          </li>
 				       ))}
 

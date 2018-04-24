@@ -8,7 +8,7 @@ body {
 .container {
 	padding: 50px;
 	position: relative;
-	max-width: 1000px;
+	max-width: 1600px;
 }
 
 .form-area {
@@ -22,12 +22,37 @@ body {
 }
 
 .form-area button {
+	color: #fff;
 	width: 80px;
 	display: block;
 	margin: 10px auto;
 	padding: 10px;
 	text-transform: uppercase;
-	background-color: #5495ff;
+	background-color: #2CBD4D;
 	border: none;
 	border-radius: 3px;
+}
+
+.list-users {
+	flex-wrap: wrap;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list-users li{
+	text-align: center;
+	margin: 40px;
+}
+
+.view-user {
+	transition: color 0.3s ease;
+	color: #2CBD4D;
+	display: block;
+	text-decoration: none;
+}
+
+.view-user:hover {
+	color: #18672b;
 }
