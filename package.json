@@ -2,6 +2,7 @@
   "name": "github-profile-viewer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://johnnypanda.github.io/github-profile-viewer/",
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
     "form-serialize": "^0.7.2",
@@ -28,6 +29,5 @@
     "gh-pages": "^1.1.0",
     "prettier": "1.12.1",
     "redux-devtools": "^3.4.1"
-  },
-  "homepage": "http://johnnypanda.github.io/github-profile-viewer"
+  }
 }
