@@ -9,7 +9,7 @@ import { createStore } from 'redux';
 
 
 ReactDOM.render(
-  <BrowserRouter><App /></BrowserRouter>,
+  <BrowserRouter ><App /></BrowserRouter>,
   document.getElementById('root')
 );
 registerServiceWorker();

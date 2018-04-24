@@ -18,12 +18,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "stop": "taskkill -F -IM node.exe"
+    "stop": "taskkill -F -IM node.exe",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^1.1.0",
     "prettier": "1.12.1",
     "redux-devtools": "^3.4.1"
-  }
+  },
+  "homepage": "http://johnnypanda.github.io/github-profile-viewer"
 }
