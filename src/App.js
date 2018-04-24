@@ -9,48 +9,48 @@ const clientID = 'Iv1.c2e909d24dda441f',
 	  clientSecret ='c44b9901acf89d00e55a61901f9edcca4940f511';
 
 class App extends Component {
- constructor(props){
- 	super(props);
-	 	this.state = {	users: [],
-		currentUser: 'Johnnypanda',
-		url: '',
+	state = {
+		users: [],
+		currentUser: undefined,
+		url: undefined,
+		userData: [],
 		error: ''
 	}
-	this.viewUser.bind(this);
- }
 
- viewUser = () => {
- 	console.log(this)
- }
-
-
+	viewUser = (e) => {
+		this.setState({currentUser: e.target.id})
+	}
 
 	getUserList = async (e) => {
 		e.preventDefault();
 		const user = e.target.elements.user.value;
-		// const api_call = await fetch(`https://api.github.com/users/${user}?client_id=${clientID}&client_secret=${clientSecret}`);
 		const api_call = await fetch(`https://api.github.com/search/users?q=${user}`);
-		const data = await api_call.json(); //converts API call to JSON
+		const data = await api_call.json();
+
 		if(user){
 			console.log(data);
+			console.log(this.props.userData);
 			this.setState({
-				users: data.items,
-				error: ''
+				users: data.items
 			});
 		}
 	}
-
 
   	render() {
 	    return (
 		      <div className="App">
 
   		              <Route exact path="/" render={() => (
-  		              	<ListUsers getUserList={this.getUserList} viewUser={this.viewUser} users={this.state.users} />
+  		              	<ListUsers getUserList={this.getUserList}
+			  		               viewUser={this.viewUser}
+			  		               users={this.state.users}
+			  		               currentUser={this.state.currentUser}
+  		              	/>
 		              )}/>
 
   		              <Route path="/view" render={() => (
-						<ViewUser user={this.state.currentUser} />
+						<ViewUser currentUser={this.state.currentUser}
+								  users={this.state.users} />
 					  )}/>
 		      </div>
 	    )

@@ -9,6 +9,11 @@ body {
 	padding: 50px;
 	position: relative;
 	max-width: 1600px;
+
+}
+
+.container p {
+	text-align: center;
 }
 
 .form-area {
@@ -21,7 +26,7 @@ body {
 	padding: 10px;
 }
 
-.form-area button {
+.form-area .btn {
 	color: #fff;
 	width: 80px;
 	display: block;
@@ -34,6 +39,8 @@ body {
 }
 
 .list-users {
+	padding: 0;
+	margin: 0;
 	flex-wrap: wrap;
 	list-style: none;
 	display: flex;
@@ -55,4 +62,24 @@ body {
 
 .view-user:hover {
 	color: #18672b;
+}
+
+.home {
+	color: #fff;
+	background-color: #2CBD4D;
+	text-decoration: none;
+	padding: 10px 20px;
+	transition: background-color 0.3s ease;
+	border-radius: 3px;
+}
+
+.home:hover {
+	background-color: #18672b;
+}
+
+.inner {
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 25px;
 }

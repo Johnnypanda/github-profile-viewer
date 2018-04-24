@@ -17,23 +17,25 @@ class ListUsers extends Component {
 			            name="user"
 			            placeholder="Type in a Github username..."
 			          />
-			          <button> Search </button>
+			          <button className="btn"> Search </button>
 			        </form>
 		        </div>
 
 		  		<ul className="list-users">
 		     	   {this.props.users.map((user) => (
-
 				          <li key={user.id}>
+
 					            <p>{user.login}</p>
 					            <img src={user.avatar_url} style={{maxWidth: '120px'}}/>
 	 						    <Link to="/view"
 					          	 className ="view-user"
-					          	 onClick={() => (console.log(this.props.currentUser))}
-
+					          	 id={user.login}
+					          	 onClick={this.props.viewUser}
 					          	 >
 					          	View Profile
 					          	</Link>
+
+
 				          </li>
 				       ))}
 
