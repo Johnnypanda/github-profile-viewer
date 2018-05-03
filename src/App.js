@@ -66,7 +66,7 @@ class App extends Component {
   		              	/>
 		              )}/>
 
-  		              <Route path={`${process.env.PUBLIC_URL}/view`} render={() => (
+  		              <Route exact path={`${process.env.PUBLIC_URL}/view`} render={() => (
 						<ViewUser currentUser={this.state.currentUser}
 								  renderNewUser={this.renderNewUser}
 								  viewUser={this.viewUser}
