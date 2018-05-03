@@ -7,7 +7,7 @@ class ViewUser extends Component {
 	render(){
 		  return (
 		  	<div className="container">
-		  		 <Link className="home" to="/">Back</Link>
+		  		 <Link className="home" to={`${process.env.PUBLIC_URL}/`}>Back</Link>
 		  	   	  {this.props.users.map((user) => ((user.login === this.props.currentUser) ?
 		  	   	  				<div className="inner" key={user.id}>
 		  	   	  					<p id="selectedUser">{user.login}</p>
