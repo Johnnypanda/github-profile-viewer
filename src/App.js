@@ -56,7 +56,7 @@ class App extends Component {
 	    return (
 		      <div className="App">
 
-  		              <Route exact path="/" render={() => (
+  		              <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => (
   		              	<ListUsers getUserList={this.getUserList}
 			  		               viewUser={this.viewUser}
 			  		               users={this.state.users}
@@ -65,7 +65,7 @@ class App extends Component {
   		              	/>
 		              )}/>
 
-  		              <Route exact path="/view" render={() => (
+  		              <Route exact path={`${process.env.PUBLIC_URL}/view`} render={() => (
 						<ViewUser currentUser={this.state.currentUser}
 								  renderNewUser={this.renderNewUser}
 								  viewUser={this.viewUser}

@@ -23,7 +23,7 @@ class ListUsers extends Component {
 				          <li key={user.id}>
 					            <p>{user.login}</p>
 					            <img src={user.avatar_url} style={{maxWidth: '120px'}}/>
-	 						    <Link to="/view"
+	 						    <Link to={`${process.env.PUBLIC_URL}/view`}
 					          	 className ="view-user"
 					          	 id={user.login}
 					          	 onClick={this.props.viewUser}
