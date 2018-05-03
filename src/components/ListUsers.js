@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
-
-
 
 class ListUsers extends Component {
 
@@ -23,8 +19,8 @@ class ListUsers extends Component {
 
 		  		<ul className="list-users">
 		     	   {this.props.users.map((user) => (
-				          <li key={user.id}>
 
+				          <li key={user.id}>
 					            <p>{user.login}</p>
 					            <img src={user.avatar_url} style={{maxWidth: '120px'}}/>
 	 						    <Link to="/view"
