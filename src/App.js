@@ -22,7 +22,6 @@ class App extends Component {
 		this.setState({
 			currentUser: selected
 				}, () => {
-				console.log(this.state.currentUser);
 				this.renderNewUser();
 			})
 	}
